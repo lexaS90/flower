@@ -1,0 +1,11 @@
+.header{
+	background-color: red;
+	&-wrap{
+	}
+	&__logo{
+		background-color: green;
+	}
+	&__contact{
+		background-color: gold;
+	}
+}
