@@ -2,19 +2,45 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px){
-	/**/
+	.main-menu__title{
+		font-size: em(14px);
+	}
+	.main-menu__link{
+		padding-left: 14px;
+		padding-right: 14px;
+	}
 }
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px){
-	/**/
+	.main-menu__wrap{
+		text-align: center;
+	}
+	.main-contact__phone{
+		text-align: center;
+	}
+	.main-contact__callback{
+		width: 30%;
+		margin: 0 auto;
+	}
+	.advantages-item{
+		margin-bottom: 40px;
+	}	
 }
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px){
-	/**/
+	%page-title{
+		&::before,
+		&::after{
+			display: none;
+		}
+	}
+	p{
+		font-size: em(14px);
+	}
 
 	
 	/*Disable Animation on Mobile Devices*/
@@ -44,7 +70,52 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
-	/**/
+	.site-name{
+		font-size: em(20px);
+		line-height: em(16px);
+	}
+	.site-descr{
+		font-size: em(14px);
+	}
+
+	.main-menu__icon{
+		font-size: em(20px);
+	}
+	.main-menu__title{
+		font-size: em(12px);
+	}
+
+	.main-contact__callback{
+		width: 100%;
+	}
+
+	.owl-buttons{
+		display: none;
+	}
+
+	.main-slider__title{
+		font-size: em(18px);
+		line-height: em(18px);
+		margin-bottom: 10px;
+	}
+	.main-slider__descr{
+		font-size: em(16px);
+		line-height: em(16px);
+	}
+	.main-slider__content{
+		top: 0;
+		bottom: 0;
+		left: 0;
+		height: 0;
+		height: 100%;
+	}
+	%page-title,
+	h2{
+		font-size: em(22px);
+	}
+	p{
+		font-size: em(12px);
+	}
 }
 
 

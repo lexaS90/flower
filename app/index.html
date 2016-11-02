@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <!-- bower:css -->
     <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/vendor/owl-carousel/owl-carousel/owl.carousel.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css css/main.min.css -->
@@ -20,24 +21,124 @@
     <!-- endbuild -->
   </head>
 
-  <body>
+  <body class="page isHome">
     <!--[if lt IE 8]>
 			<p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, обновите ваш браузер</a></p>
 		<![endif]-->
-    <!-- Code -->
-    <!-- Code -->
-    <div class="header">
-      <div class="header-wrap">
-        <div class="header__logo">123</div>
-        <div class="header__contact">321</div>
+    <header class="page__header">
+      <div class="main-header">
+        <div class="main-header__wrap">
+          <div class="main-header__logo">
+            <div class="logo">
+              <div class="logo__img"> <img src="/img/logo.png" alt="Доставка цветов по Киеву и Киевской области"> </div>
+              <div class="logo__descr">
+                <div class="site-name">Доставка цветов</div>
+                <div class="site-descr">по Киеву и Киевской области</div>
+              </div>
+            </div>
+          </div>
+          <div class="main-header__menu">
+            <nav class="main-menu">
+              <ul class="main-menu__wrap">
+                <li class="main-menu__item">
+                  <a href="#" class="main-menu__link"> <span class="main-menu__icon">
+									<i class="fa fa-home" aria-hidden="true"></i>
+								</span> <span class="main-menu__title">Главная</span> </a>
+                </li>
+                <li class="main-menu__item main-menu__item--active">
+                  <a href="#" class="main-menu__link"> <span class="main-menu__icon">
+									<i class="fa fa-list" aria-hidden="true"></i>
+								</span> <span class="main-menu__title">Каталог</span> </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="#" class="main-menu__link"> <span class="main-menu__icon">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</span> <span class="main-menu__title">О нас</span> </a>
+                </li>
+                <li class="main-menu__item">
+                  <a href="#" class="main-menu__link"> <span class="main-menu__icon">
+									<i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+								</span> <span class="main-menu__title">Контанты</span> </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="main-header__contact">
+            <div class="main-contact">
+              <div class="main-contact__phone">+38(095)322-34-52</div>
+              <div class="main-contact__schedule">Понедельник - пятница с 10-00 до 17-00</div> <a class="main-contact__callback btn btn-primary">Обратный звонок</a> </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- Code -->
+    </header>
+    <section class="page__slider">
+      <div class="main-slider">
+        <div class="main-slider__slide"> <img class="main-slider__img" src="../../img/slider/1.jpg" alt="">
+          <div class="main-slider__content-wrap">
+            <div class="main-slider__content">
+              <div class="main-slider__title">Лучшие букеты Lorem ipsum dolor sit amet.</div>
+              <div class="main-slider__descr">Делаем оригинальные букеты на заказ</div>
+            </div>
+          </div>
+        </div>
+        <div class="main-slider__slide"> <img class="main-slider__img" src="../../img/slider/2.jpg" alt="">
+          <div class="main-slider__content-wrap">
+            <div class="main-slider__content">
+              <div class="main-slider__title">Бесплатная доставка Lorem ipsum dolor sit amet.</div>
+              <div class="main-slider__descr">Делаем оригинальные букеты на заказ</div>
+            </div>
+          </div>
+        </div>
+        <div class="main-slider__slide"> <img class="main-slider__img" src="../../img/slider/3.jpg" alt="">
+          <div class="main-slider__content-wrap">
+            <div class="main-slider__content">
+              <div class="main-slider__title">Лучший сервис Lorem ipsum dolor sit amet.</div>
+              <div class="main-slider__descr">Делаем оригинальные букеты на заказ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page__main"> main </section>
+    <section class="page__advantages">
+      <div class="advantages">
+        <div class="advantages__wrap">
+          <h2 class="advantages__title">Наши приемущества</h2>
+          <div class="advantages__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repellendus dolor laborum voluptatibus amet quaerat. Expedita, distinctio quas error reprehenderit fugiat non nisi eveniet, consectetur, culpa veniam ex nemo beatae dignissimos
+              et nulla voluptates. Aut, incidunt, porro. Provident illo quo laborum sed, accusamus nostrum iure ratione laboriosam deserunt vero hic! Inventore minima commodi temporibus esse, provident, sequi laudantium aspernatur, eius, eligendi repellat
+              officia dolor ipsam cumque a soluta illum. Suscipit sequi, modi, cum magni, non nesciunt ducimus nisi, repudiandae nam ab accusamus blanditiis possimus culpa odio! Odit adipisci, inventore est soluta tempora magni rem blanditiis sunt aperiam
+              labore recusandae molestiae.</p>
+          </div>
+          <div class="advantages__list">
+            <div class="advantages-item">
+              <div class="advantages-item__icon"> <img class="advantages-item__img" src="img/advantages/checked.svg" alt=""> </div>
+              <div class="advantages-item__text">Наши флористы – профессионалы, убедитесь в этом сами!</div>
+            </div>
+            <div class="advantages-item">
+              <div class="advantages-item__icon"> <img class="advantages-item__img" src="img/advantages/flower.svg" alt=""> </div>
+              <div class="advantages-item__text">У нас самые свежие цветы, они будут радовать получателя минимум 7 дней!</div>
+            </div>
+            <div class="advantages-item">
+              <div class="advantages-item__icon"> <img class="advantages-item__img" src="img/advantages/workflow.svg" alt=""> </div>
+              <div class="advantages-item__text">96% клиентов рекомендуют нас друзьям и обращаются к нам постоянно</div>
+            </div>
+            <div class="advantages-item">
+              <div class="advantages-item__icon"> <img class="advantages-item__img" src="img/advantages/speedometer.svg" alt=""> </div>
+              <div class="advantages-item__text">Быстрая доставка без опозданий, самые улыбчивые курьеры</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page__contact"> contact </section>
+    <footer class="page__footer"> 321 </footer>
     <div class="hidden"></div>
     <!-- build:js js/vendor.min.js -->
     <!-- bower:js -->
     <script src="/vendor/jquery/dist/jquery.js"></script>
     <script src="/vendor/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="/vendor/owl-carousel/owl-carousel/owl.carousel.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/main.min.js -->

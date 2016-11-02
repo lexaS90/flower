@@ -4,3 +4,7 @@
  * 	Example
  *	@include font-face("OpenSans", "fonts/OpenSans/OpenSansRegular/OpenSansRegular", $file-formats: eot woff2 woff);
  */
+
+@include font-face("CalligraphMedium", "../fonts/CalligraphMedium/CalligraphMedium", $file-formats: eot ttf woff);
+@include font-face("OpenSansRegular", "../fonts/OpenSans/OpenSansRegular/OpenSansRegular", $file-formats: eot ttf woff);
+@include font-face("OpenSansBold", "../fonts/OpenSans/OpenSansBold/OpenSansBold", $file-formats: eot ttf woff);

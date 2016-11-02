@@ -1,6 +1,13 @@
+@import "vars.scss";
+
 html {
     font-size: 1em;
     line-height: 1.4;
+}
+
+body{
+    font-size: 16px;
+    font-family: OpenSansRegular, $verdana;
 }
 
 /*
@@ -78,6 +85,91 @@ textarea {
     padding: 0.2em 0;
 }
 
+img{
+    max-width: 100%;
+}
+
+p{
+    color: #333;
+    line-height: em(26px);
+}
+
+h2{
+    margin: 0;
+}
+
 .hidden{
 	display:none;
+}
+
+.btn{
+    display: block;
+}
+
+.btn-primary{
+    background-color:$accentColor2;
+    border: 0;
+    box-shadow: 0 2px shade($accentColor2, 10%);
+    font-size: em(12px);
+    width: 100%;
+}
+
+.btn-primary:hover,
+.btn-primary.focus{
+    background-color:$accentColor1;
+    border: 0;
+    box-shadow: 0 2px shade($accentColor1, 10%);
+}
+
+.btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle, .btn-primary:focus{
+    background-color:$accentColor1;
+    border: 0;
+    box-shadow: none;
+}
+
+.btn-primary:active:hover, 
+.btn-primary:active:focus, 
+.btn-primary.focus:active, 
+.btn-primary.active:hover, 
+.btn-primary.active:focus, 
+.btn-primary.active.focus, 
+.open > .btn-primary.dropdown-toggle:hover, 
+.open > .btn-primary.dropdown-toggle:focus, 
+.open > .btn-primary.dropdown-toggle.focus{
+    background-color:$accentColor1;
+    border: 0;
+    box-shadow: 0 2px shade($accentColor1, 10%);
+}
+
+%page-wrap{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+%page-title,
+h2{
+    color: #333333;
+    font-family: OpenSansBold, $verdana;
+    font-size: em(30px);
+}
+%page-title{
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+    &::before,
+    &::after{
+        content: '';
+        display: inline-block;
+        position: relative;
+        top: -7px;
+        height: 1px;
+        width: 130px;
+        background-color: $accentColor1;
+    }
+    &::before{       
+        right: 20px;
+    }
+    &::after{
+        left: 20px;
+    }
 }
