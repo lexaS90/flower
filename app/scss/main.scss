@@ -77,9 +77,223 @@
 
 // End Slider
 
+// Main
+
 .page__main{
-	background-color: red;
+	@extend %page-wrap;
+	background-color: #f7f8f1;
 }
+.main-products{
+	@include container();
+	&__wrap{
+		@include make-row;
+	}
+	&__title{
+		@extend %page-title;
+		margin-bottom: 40px;
+	}
+	&__checkout{
+		@include make-md-column-pull(9);		
+		@include make-md-column(3);				
+		position: relative;
+	}
+	&__product-list{		
+		@include make-md-column-push(3);		
+		@include make-md-column(9);	
+	}
+}
+.products-filter{
+	margin-bottom: 40px;
+	text-align: right;
+	&__item{
+		background-color: transparent;
+		border:1px solid $accentColor1;
+		border-radius: 10px;
+		padding: 2px 30px;
+		font-size: em(14px);
+		color: $accentColor1;
+		margin-right: 8px;
+		&.active{
+			background-color: $accentColor1;
+			color: #fff;
+		}
+		&:hover{
+			background-color: $accentColor2;
+			border:1px solid $accentColor2;
+			color: #fff;
+		}
+	}
+}
+.products{
+	//@include container-fluid();
+	&__wrap{
+		@include make-row;
+	}
+}
+.product{
+	@include make-sm-column(6);
+	@include make-md-column(4);
+	margin-bottom: 50px;
+	display: none;
+	&__wrap{
+		background-color: #fff;
+		padding: 40px 20px 80px;
+		border:1px solid #cecfce;
+	}
+	&__img{
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	&__title{
+		color: #333333;
+		font-size: em(26px);
+		font-style: italic;
+		text-align: center;
+		line-height: em(18px);
+		margin-bottom: 14px;
+	}
+	&__price{
+		@include clearfix();
+		margin-bottom: 22px;
+	}
+	&__old-price{
+		float: left;
+		width: 49%;
+		color: #8c8c8a;
+		font-size: em(18px);
+		text-decoration: line-through;
+	}
+	&__current-price{
+		float: right;
+		width: 49%;
+		text-align: right;
+		font-family: OpenSansBold, $verdana;
+		color: $accentColor2;
+	}
+	&__btn{
+		margin:-70px auto 0;
+	}
+}
+.main-checkout{
+	position: relative;
+	&::after{
+		position: absolute;
+		content: '';		
+		height: 100px;
+		width: 100%;
+		background:url('../img/checkout_bottom.png') no-repeat 0 100%;
+		background-size: 100% auto;
+		bottom: -50px;
+		width: 93%;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+	&__top{
+		background: url("../img/checkout_top.png") no-repeat 0 100%;
+		background-size: 100% auto;
+		height: 72px;		 
+	}
+	&__icon{
+		color: $accentColor1;
+		font-size: em(24px);
+		margin-right: 12px;
+	}
+	&__title{
+		color: #333;
+		font-size: em(18px);
+		font-family: OpenSansBold, $verdana;
+	}
+	&__body{
+		position: relative;
+		width: 92%;
+		margin:auto;		
+		background: url("../img/checkout_body_main.png") repeat-y;
+		background-size: 100% auto;
+		padding: 10px;
+		&::before{
+			position: absolute;
+			display: block;
+			content: '';
+			width: 100%;
+			top: 0px;
+			height: 400px;
+			background-color: #fff;
+			background: url("../img/checkout_body.png") no-repeat;
+			background-size: 100% auto;
+			right: 0;
+			left: 0;
+			margin:auto;
+		}
+	}
+	&__orders{
+		position: relative;
+	}
+	&__total{
+		font-size: em(12px);
+		font-style: italic;
+		margin-top: -20px;
+		text-align: right;
+		margin-bottom: 20px;
+		letter-spacing: 1px;
+	}
+}
+.order-checkout{
+	background: url('../img/order_line.png') 0 100% repeat-x;
+	@include clearfix();
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	&__left{
+		width: 52%;
+		float: left;
+	}
+	&__right{
+		width: 48%;
+		float:right;
+	}
+	&__img{
+		width:74%;
+		margin: auto;
+		margin-bottom: 8px;
+	}
+	&__title{
+		font-size: em(14px);
+		font-style: italic;
+		color: #333;
+	}
+	&__price{
+		text-align: right;
+		font-family: OpenSansBold, $verdana;
+		color: $accentColor1;
+		padding-top: 20px;
+	}
+}
+.checkout-form{
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	z-index: 10;
+	&__name[type="text"], &__phone[type="text"]{
+		border:1px solid #cdcdcd;
+		padding: 4px 10px;
+		color: #333;
+		font-size: em(12px);
+	}
+
+	&__name{
+	}
+	&__phone{
+	}
+	.form-group{
+		margin-bottom: 6px;
+	}
+	&__btn{
+		margin-top: 10px;
+	}
+}
+
+// End Main
 
 
 // Advantages
@@ -90,7 +304,7 @@
 }
 
 .advantages{
-		@include container();
+	@include container();
 	&__wrap{
 		@include make-row;
 	}
@@ -135,6 +349,73 @@
 }
 
 // End advantages
+
+// Contact
+
+.page__contact{
+	background-color: #f7f8f1;
+	@extend %page-wrap;
+}
+.contact{
+	@include container();
+	&__wrap{
+		@include make-row;
+	}
+	&__title{
+		@extend %page-title;
+		margin-bottom: 30px;
+	}
+	&__list{
+		@include clearfix();
+		margin-bottom: 40px;
+	}
+	&__map{
+		@include make-md-column(8);
+		margin-bottom: 40px;
+	}
+	&__form{
+		@include make-md-column(4);
+	}
+}
+.contact-item{
+	@include make-sm-column(6);
+	@include make-md-column(3);
+	&__icon{
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: top;
+		.fa{
+			font-size: em(30px);
+			color: $accentColor2;
+		}
+	}
+	&__text{
+		display: inline-block;
+		font-size: em(14px);
+		color: #000;
+		max-width: 80%;
+	}
+}
+
+.contact-form{
+	&__message{
+		min-height: 120px;
+	}
+}
+
+.main-map { 
+	height: 400px;
+	border:1px solid $accentColor1;
+}
+
+
+// End contact
+
+/* #checkout{
+	position: fixed;
+	top: 0;
+	left: 0;
+} */
 
 @import "footer.scss";
 

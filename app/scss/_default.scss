@@ -1,4 +1,8 @@
 @import "vars.scss";
+html,body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
 html {
     font-size: 1em;
@@ -8,6 +12,25 @@ html {
 body{
     font-size: 16px;
     font-family: OpenSansRegular, $verdana;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea{
+    border:1px solid $accentColor1;
+    border-radius: 4px;
+    padding: 12px 16px;
+    display: block;
+    width: 100%;
+    font-size: em(14px);
+    @include placeholder {
+        font-style: italic;
+        color:#333;
+    }
 }
 
 /*
@@ -139,6 +162,46 @@ h2{
     background-color:$accentColor1;
     border: 0;
     box-shadow: 0 2px shade($accentColor1, 10%);
+}
+
+.btn-default{
+    background-color:$accentColor1;
+    border: 0;
+    box-shadow: 0 3px shade($accentColor1, 10%);
+    font-size: em(12px);
+    font-family: OpenSansBold, $verdana;
+    font-size: em(16px);
+    color: #fff;
+    padding: 8px 50px;
+}
+
+.btn-default:hover,
+.btn-default.focus{
+    background-color:$accentColor2;
+    border: 0;
+    box-shadow: 0 2px shade($accentColor2, 10%);
+    color: #fff;
+}
+
+.btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle, .btn-default:focus{
+    background-color:$accentColor2;
+    border: 0;
+    box-shadow: none;
+    color: #fff;
+}
+
+.btn-default:active:hover, 
+.btn-default:active:focus, 
+.btn-default.focus:active, 
+.btn-default.active:hover, 
+.btn-default.active:focus, 
+.btn-default.active.focus, 
+.open > .btn-default.dropdown-toggle:hover, 
+.open > .btn-default.dropdown-toggle:focus, 
+.open > .btn-default.dropdown-toggle.focus{
+    background-color:$accentColor2;
+    border: 0;
+    color: #fff;
 }
 
 %page-wrap{

@@ -1,0 +1,48 @@
+// Footer
+
+.page__footer{
+	background-color: $accentColor1;
+}
+
+.main-footer{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	@include container();
+	color: #fff;
+	&__wrap{
+		@include make-row;
+	}
+	&__site-name{
+		@include make-md-column(4);
+		font-size: em(18px);
+		font-family: OpenSansBold, $verdana;
+	}
+	&__social{
+		@include make-md-column(4);
+		text-align: center;
+	}
+	&__copyright{
+		@include make-md-column(4);
+		text-align: right;
+	}
+}
+
+.social-item{
+	height: 30px;
+	width: 30px;
+	background-color: #fff;
+	border-radius: 100%;
+	display: inline-block;
+	color: $accentColor1;
+	text-align: center;
+	margin-right: 8px;
+	@include transition(all 0.1s ease-in-out);
+	&:hover{
+		color: $accentColor2;
+	}
+	&__icon{
+		line-height: em(28px);
+	}
+}
+
+// End Footer
