@@ -314,6 +314,9 @@ h2 {
         float: left;
         width: 16.66667%; } }
 
+.mini-header__left-line {
+  display: none; }
+
 .page__mini-header--open {
   position: fixed;
   top: 0;
@@ -380,13 +383,6 @@ h2 {
     max-width: 30%;
     margin: 0 auto;
     margin-top: 20px; }
-  .page__mini-header--open .mini-header__left-line {
-    position: absolute;
-    width: 50px;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: #8253a7; }
 
 .page__mini-header--close {
   position: fixed;
@@ -401,7 +397,8 @@ h2 {
   .page__mini-header--close .main-header__menu {
     z-index: 20000;
     padding: 0;
-    width: 20px; }
+    width: 20px;
+    top: 50px; }
     .page__mini-header--close .main-header__menu__icon {
       z-index: 20000; }
   .page__mini-header--close .main-header__contact {
@@ -416,15 +413,66 @@ h2 {
   .page__mini-header--close .main-header .main-menu__icon {
     color: #fff;
     font-size: 1.25em;
-    margin-bottom: 20px; }
-  .page__mini-header--close .mini-header__left-line {
-    position: fixed;
-    width: 34px;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(130, 83, 167, 0.7);
-    z-index: 10000; }
+    margin-bottom: 10px; }
+
+.page__mini-header--close .mini-header__left-line,
+.page__mini-header--open .mini-header__left-line {
+  display: block;
+  position: fixed;
+  width: 34px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(130, 83, 167, 0.7);
+  z-index: 10000;
+  text-align: center; }
+
+.burger {
+  display: inline-block;
+  z-index: 30000;
+  margin-top: 20px; }
+
+.burger-icon {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative; }
+  .burger-icon, .burger-icon::before, .burger-icon::after {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    outline: 1px solid transparent;
+    -webkit-transition-property: background-color, -webkit-transform;
+    transition-property: background-color, -webkit-transform;
+    transition-property: background-color, transform;
+    transition-property: background-color, transform, -webkit-transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+  .burger-icon::before, .burger-icon::after {
+    position: absolute;
+    content: ""; }
+  .burger-icon::before {
+    top: -8px; }
+  .burger-icon::after {
+    top: 8px; }
+
+.burger.active .burger-icon {
+  background-color: transparent; }
+
+.burger.active .burger-icon::before {
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg); }
+
+.burger.active .burger-icon::after {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg); }
 
 .logo {
   position: relative; }

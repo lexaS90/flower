@@ -1,3 +1,5 @@
+@import "../vendor/sass-burger/_burger.scss";
+
 .page{
 	&__header{
 		background-color: #fff;
@@ -23,6 +25,9 @@
 	}
 }
 // Mini header
+.mini-header__left-line{
+	display: none;
+}
 .page__mini-header--open{
 	position: fixed;
 	top: 0;
@@ -78,16 +83,6 @@
 			margin-top: 20px;
 		}
 	}
-	.mini-header{
-		&__left-line{
-			position: absolute;
-			width: 50px;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			background-color: $accentColor1;
-		}		
-	}
 }
 .page__mini-header--close{
 		position: fixed;
@@ -104,7 +99,8 @@
 		&__menu{	
 			z-index: 20000;
 			padding: 0;		
-			width: 20px;	
+			width: 20px;
+			top: 50px;
 			&__icon{
 				z-index: 20000;
 			}
@@ -126,21 +122,38 @@
 			&__icon{
 				color: #fff;
 				font-size: em(20px);
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 			}
 		}
 	}
-	.mini-header{
-		&__left-line{
-			position: fixed;
-			width: 34px;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			background-color: rgba($accentColor1, 0.7);
-			z-index: 10000;
-		}
-	}
+}
+
+.page__mini-header--close .mini-header__left-line,
+.page__mini-header--open .mini-header__left-line{
+	display: block;
+	position: fixed;
+	width: 34px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba($accentColor1, 0.7);
+	z-index: 10000;	
+	text-align: center;
+}
+
+.burger{
+	display: inline-block;
+	z-index: 30000;
+	margin-top: 20px;
+}
+
+.burger-icon{
+	@include burger(25px, 3px, 5px, #fff);
+	position: relative;
+}
+
+.burger.active .burger-icon{
+	@include burger-to-cross;
 }
 
 // End mini header

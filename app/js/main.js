@@ -80,10 +80,9 @@ var waypoint = new Waypoint({
   element: $('#checkout')[0],
   handler: function(direction) {
     top_checkout = $(this.element).offset().top;
-    console.log(top_checkout);
     var arg = [];
     arg['el'] = $(this.element);
-    arg['top_checkout'] = top_checkout;
+    arg['top_checkout'] = top_checkout;    
 
     if (direction == 'down'){
       $(window).scroll(arg,checkout_fix);
@@ -102,7 +101,7 @@ var waypoint2 = new Waypoint({
   handler: function(direction) {
     var arg = [];
     arg['el'] = $('#checkout');
-    arg['top_checkout'] = top_checkout;
+    arg['top_checkout'] = top_checkout;    
 
     if (direction == 'down'){
       $(window).off("scroll", checkout_fix);
@@ -128,5 +127,33 @@ function checkout_fix(param){
 
 }
 
+/*
+ *  End Checkout fixed
+ */
 
+/*
+ *  Mini header
+ */
 
+$('.burger').on('click', function(){
+  $('#header').toggleClass("page__mini-header--close");
+  $('#header').toggleClass("page__mini-header--open");
+  $('.burger').toggleClass("active");
+
+  return false;
+});
+
+var waypoint3 = new Waypoint({
+  element: $('.page__main')[0],
+  handler: function(direction) {
+
+    if (direction == 'down'){
+      var header_h = $('#header').outerHeight();
+      $('.page__slider').css('margin-top', header_h + 'px');
+    }
+    if (direction == 'up'){
+      $('.page__slider').css('margin-top', 0);
+    }
+    $('#header').toggleClass("page__mini-header--close");
+  }
+});
